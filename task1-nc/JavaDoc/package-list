@@ -1,0 +1,9 @@
+nc.task1.faculty.entity
+nc.task1.faculty.entity.factory
+nc.task1.faculty.entity.group
+nc.task1.faculty.entity.human
+nc.task1.faculty.enums
+nc.task1.faculty.logic
+nc.task1.faculty.runner
+nc.task1.faculty.runner.tools
+nc.task1.faculty.runner.validations
