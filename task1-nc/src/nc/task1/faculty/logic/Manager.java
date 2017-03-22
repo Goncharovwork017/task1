@@ -1,12 +1,11 @@
 package nc.task1.faculty.logic;
 
-import nc.task1.faculty.entity.Course;
-import nc.task1.faculty.entity.factory.GroupFactory;
-import nc.task1.faculty.entity.factory.HumanFactory;
-import nc.task1.faculty.entity.group.Group;
-import nc.task1.faculty.entity.human.Human;
-import nc.task1.faculty.entity.human.Teacher;
-
+import nc.task1.faculty.entities.Course;
+import nc.task1.faculty.entities.factory.GroupFactory;
+import nc.task1.faculty.entities.factory.HumanFactory;
+import nc.task1.faculty.entities.human.Human;
+import nc.task1.faculty.entities.human.Teacher;
+import java.util.Calendar;
 import java.util.*;
 
 /**
@@ -15,9 +14,9 @@ import java.util.*;
 public class Manager {
     public static int getCurrentYear()
     {
-        java.util.Calendar calendar = java.util.Calendar.getInstance(java.util.TimeZone.getDefault(), java.util.Locale.getDefault());
-        calendar.setTime(new java.util.Date());
-        return calendar.get(java.util.Calendar.YEAR);
+        Calendar calendar = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault());
+        calendar.setTime(new Date());
+        return calendar.get(Calendar.YEAR);
     }
     /*
     public Course createTeacher(Course course, int countTeacher){

@@ -1,7 +1,7 @@
 package nc.task1.faculty.logic;
 
-import nc.task1.faculty.entity.group.Group;
-import nc.task1.faculty.entity.human.Human;
+import nc.task1.faculty.entities.group.Group;
+import nc.task1.faculty.entities.human.Human;
 import nc.task1.faculty.enums.TeacherType;
 
 import java.util.*;
