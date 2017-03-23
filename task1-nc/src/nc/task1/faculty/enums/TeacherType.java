@@ -15,7 +15,7 @@ public enum TeacherType {
          case PROFFESSOR:
             return "Профессор";
          case ASSIST:
-            return "какой-то студентик";
+            return "Ассистент";
       }
 
       return "замена";

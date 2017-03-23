@@ -54,7 +54,7 @@ public class Employee extends Human implements Serializable {
                 ", Год рождения=" + this.getDateOfBirth() +
                 ", Балл=" + this.getMark()+
                 ", Отзыв=" + this.getDesc()+
-              //v  ", teacher=" + this.getTeacherType() +
+
                 ' ' + "\n";
     }
 }

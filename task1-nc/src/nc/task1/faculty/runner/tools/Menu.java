@@ -32,7 +32,6 @@ public class Menu {
                     + "2 - Сортировка по возрасту \n"
                     + "3 - Общий возраст людей \n"
                     + "4 - Вывод из файла \n");
-            // +"5 - Удалить данные из файла.");
 
 
             switch (Validations.inputNumber()) {
@@ -56,31 +55,12 @@ public class Menu {
                     System.out.println("Общий возраст людей: " + manager.calculateTotalAgeHuman(course.getHumanList()));
                     break;
                 }
-                //  case 4: {
-                // System.out.println("Введите критерии препода");
-                //  for (TeacherType teacherType : TeacherType.values()) {
-                //     System.out.print(teacherType.name() + " \n");
-                //// }
 
-                //   teacher = Validations.inputString();
-                //  System.out.println("нашло группу по преподу: ");
-                // System.out.print(Actions.findGroupByTeacher(
-                //  System.out.print(Actions.findGroupByTeacher(teacher.toUpperCase(), course.getTeacherList()));
-                //   teacher.toUpperCase(), course.getTeacherList()) +"\n");
-
-                // break;
-
-                //   }
                 case 4: {
                     System.out.println("=========================================================");
                     String textFromFile = FileWorker.read(fileName);
                     System.out.println(textFromFile);
                 }
-                // case 5:{
-                //     System.out.println("удаление из файла");
-                //      String textFromfile = FileWorker.delete(fileNameDelete);
-                //      System.out.println(textFromfile);
-                //  }
 
             }
 

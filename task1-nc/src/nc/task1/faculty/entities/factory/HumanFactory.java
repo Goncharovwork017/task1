@@ -4,6 +4,7 @@ import nc.task1.faculty.entities.human.Employee;
 import nc.task1.faculty.entities.human.Human;
 import nc.task1.faculty.entities.human.Student;
 import nc.task1.faculty.enums.*;
+import nc.task1.faculty.exception.MyException;
 
 import java.util.*;
 
@@ -11,10 +12,6 @@ import java.util.*;
  * Created by ivan on 20.03.2017.
  */
 public class HumanFactory {
-
-
-
-
 
     public static int GC(int start, int end) {
         GregorianCalendar gc = new GregorianCalendar();
@@ -32,27 +29,9 @@ public class HumanFactory {
         return start + (int) Math.round(Math.random() * (end - start));
     }
 
-/*
-    public static void randCourseType(){
+    public static Human createHuman() throws MyException {
         Random random = new Random();
-
-        CourseType courseType = CourseType.ENDED;
-        if(marksName == CourseType.ENDED){
-
-            String[] marks = {"A","B","C","F","D","E"};
-            List<String> freeMarks = null;
-            for (int i = 0; i < 100; i++) {
-                if (freeMarks == null || freeMarks.size() == 0) {
-                    freeMarks = new ArrayList<>(Arrays.asList(marks));
-                }
-            }
-            String marksName = freeMarks.remove(random.nextInt(freeMarks.size()));
-
-        }else { }
-    }
-*/
-    public static Human createHuman() {
-        Random random = new Random();
+        String s = "Ошибка рандома";
 
         String[] desc = {"Good","Bad","Very good","Very bad"};
         List<String> freeDesc = null;
@@ -87,7 +66,6 @@ public class HumanFactory {
                 return new Student(
                         HumanName,
                         GC(1980, 1999),
-                       // TeacherType.values()[(new Random().nextInt(TeacherType.values().length))],
                         StudentType.values()[(new Random().nextInt(StudentType.values().length))],
                         marksName,
                         descsName);
@@ -95,12 +73,12 @@ public class HumanFactory {
                 return new Employee(
                         HumanName,
                         GC(1970, 1990),
-                       // TeacherType.values()[(new Random().nextInt(TeacherType.values().length))],
                         EmployeeType.values()[(new Random().nextInt(EmployeeType.values().length))]
 
                 );
             default:
-                throw new IllegalArgumentException();
+               return createHuman();
+
         }
 
     }

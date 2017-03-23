@@ -53,7 +53,6 @@ public class GroupFactory {
 
 
     public static Group createGroup(){
-        Random random = new Random();
         return new Group(
                 GroupType.values()[(new Random().nextInt(GroupType.values().length))],
                 CourseType.values()[(new Random().nextInt(CourseType.values().length))],

@@ -5,6 +5,8 @@ import nc.task1.faculty.entities.factory.GroupFactory;
 import nc.task1.faculty.entities.factory.HumanFactory;
 import nc.task1.faculty.entities.human.Human;
 import nc.task1.faculty.entities.human.Teacher;
+import nc.task1.faculty.exception.MyException;
+
 import java.util.Calendar;
 import java.util.*;
 
@@ -18,21 +20,8 @@ public class Manager {
         calendar.setTime(new Date());
         return calendar.get(Calendar.YEAR);
     }
-    /*
-    public Course createTeacher(Course course, int countTeacher){
-        Set<Teacher> teachers = new HashSet<>();
-        for(int i =0; i < countTeacher ; i++){
-            teachers.add(GroupFactory.createTeacher());
-        }
-        course.setTeacherList(teachers);
-        return course;
-    }
-*/
 
-
-
-
-    public Course createCourse(Course course, int countHuman){
+    public Course createCourse(Course course, int countHuman) throws MyException{
         List<Human> humans = new ArrayList<>();
         Set<Teacher> teachers = new HashSet<>();
         teachers.add(GroupFactory.createTeacher());
@@ -42,11 +31,6 @@ public class Manager {
         }
         course.setHumanList(humans);
         course.setGroup(GroupFactory.createGroup());
-
-
-
-
-
         course.setTeacherList(teachers);
         return course;
     }
