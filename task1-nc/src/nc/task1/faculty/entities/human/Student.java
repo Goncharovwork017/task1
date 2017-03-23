@@ -68,8 +68,6 @@ public class Student extends Human implements Serializable {
                 ", Год рождения= " + this.getDateOfBirth() +
                 ", Балл=" + this.getMark()+
                 ", Отзыв=" + this.getDesc()+
-                ", numberObjects =" +numberObjects +
-
                 ' ' + "\n";
     }
 }
