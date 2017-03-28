@@ -36,6 +36,6 @@ public class Teacher extends Human implements Serializable {
                 ", Фамилия= '" + this.getName() + '\'' +
                 ", Год рождения= " + this.getDateOfBirth() +
                 ", numberObjects=" +numberObjects +
-                '}' +"\n" +"=========================================================";
+                ' ' +"\n" +"=========================================================";
     }
 }

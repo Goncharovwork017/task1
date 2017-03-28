@@ -8,6 +8,9 @@ import java.io.*;
  * Created by ivan on 21.03.2017.
  */
 public class FileWorker {
+  //  private final static String filePath = "src//resources//";
+    // filinameOut -> filepath and fileName
+
 
     public static void write(String filiNameOut, String sb) throws MyException {
         File file = new File(filiNameOut);

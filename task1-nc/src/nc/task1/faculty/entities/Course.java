@@ -13,7 +13,7 @@ import java.util.Set;
  * Created by ivan on 20.03.2017.
  */
 public class Course {
-
+    int count = 0;
     private List<Human> humanList = new ArrayList<>();
     // Добавить Teacherlist
     private Set<Teacher> teacherList = new HashSet<>();
@@ -49,10 +49,10 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Курс:{" +
+        return "Курс " + ++count + "\n" +
                 "Группа=" + group +"\n" +
                 "Список людей=" + humanList +
                 "Преподаватель=" +teacherList +
-                '}';
+                ' ';
     }
 }

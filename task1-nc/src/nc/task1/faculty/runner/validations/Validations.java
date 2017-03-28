@@ -26,22 +26,17 @@ public final class Validations {
                 System.out.println("Неверный формат. Повторите ввод..");
                 continue;
             }
+
         }
+        input.close();
         return 0;
     }
 
     public static String inputString(){
         input = new Scanner(System.in);
+        input.close();
         return input.next();
     }
-
-
-
-
-
-
-
-
 
 
 }

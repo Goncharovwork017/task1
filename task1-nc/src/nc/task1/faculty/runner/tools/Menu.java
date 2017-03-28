@@ -10,9 +10,9 @@ import nc.task1.faculty.runner.validations.Validations;
  * Created by ivan on 22.03.2017.
  */
 public class Menu {
-    private static String filiNameOut = "D://output.txt";
-    private static String fileName = "D://output.txt";
-    private static String fileNameDelete = "D://output.txt";
+   // private static String filiNameOut = "D://output.txt";
+  //  private static String fileName = "D://output.txt";
+   private final static String filePath = "src//nc//task1//faculty//resources//output//";
 
 
     public static Course course = new Course();
@@ -41,7 +41,7 @@ public class Menu {
 
                     manager.createCourse(course, countHuman);
                     System.out.println(course);
-                    FileWorker.write(filiNameOut, String.valueOf(course));
+                    FileWorker.write(filePath, String.valueOf(course));
 
                     break;
                 }
@@ -58,7 +58,7 @@ public class Menu {
 
                 case 4: {
                     System.out.println("=========================================================");
-                    String textFromFile = FileWorker.read(fileName);
+                    String textFromFile = FileWorker.read(filePath);
                     System.out.println(textFromFile);
                 }
 
