@@ -1,4 +1,4 @@
-package nc.task1.faculty.entities.factory;
+package nc.task1.faculty.factory;
 
 import nc.task1.faculty.entities.human.Employee;
 import nc.task1.faculty.entities.human.Human;

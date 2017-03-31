@@ -1,8 +1,8 @@
 package nc.task1.faculty.logic;
 
 import nc.task1.faculty.entities.Course;
-import nc.task1.faculty.entities.factory.GroupFactory;
-import nc.task1.faculty.entities.factory.HumanFactory;
+import nc.task1.faculty.factory.GroupFactory;
+import nc.task1.faculty.factory.HumanFactory;
 import nc.task1.faculty.entities.human.Human;
 import nc.task1.faculty.entities.human.Teacher;
 import nc.task1.faculty.exception.MyException;
