@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Created by ivan on 20.03.2017.
  */
-public class Student extends Human implements Serializable {
+public class Student extends Human implements Comparable<Student>, Serializable {
 
     private StudentType type;
     private String mark;
@@ -15,15 +15,9 @@ public class Student extends Human implements Serializable {
 
     private static int numberObjects;
 
-
-
-
     public Student() {
      super();
-
     }
-
-
 
     public Student(String name, int DateOfBirth) {
         super(name, DateOfBirth);
@@ -69,5 +63,10 @@ public class Student extends Human implements Serializable {
                 ", Балл=" + this.getMark()+
                 ", Отзыв=" + this.getDesc()+
                 ' ' + "\n";
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        return this.getName().compareTo(student.getName());
     }
 }
